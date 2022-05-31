@@ -1,8 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
 body, html {
     height: 100%;
     width: 100%;
@@ -18,9 +13,30 @@ ul {
 }
 
 .warning {
-    color: blue;
+    color: red;
 }
 
-.container {
-
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
 }
+
+.new_message {
+    display : block;
+}
+
+input, textarea {
+    margin-bottom: 5px;
+    width: 200px;
+    resize: none;
+}
+
+textarea {
+    height: 100px;
+}
+
+.main_container_details {
+    width: 300px;
+    border: solid 5px red;
+}
+

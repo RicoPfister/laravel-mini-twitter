@@ -20,10 +20,10 @@ use App\Http\Controllers\MessageController;
 
 Route::get('/', [MessageController::class, 'showAll']);
 
-Route::post('/create', [MessageController::class, 'create']);
+Route::post('/', [MessageController::class, 'create']);
 
-Route::get('/message/{id}', [MessageController::class, 'details']);
+Route::get('/{id}', [MessageController::class, 'details']);
 
-Route::delete('/message/{id}', [MessageController::class, 'delete']);
+Route::delete('/{id}', [MessageController::class, 'delete']);
 
 

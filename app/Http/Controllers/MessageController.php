@@ -12,14 +12,12 @@ class MessageController extends Controller
         // gets all the entries from table messages
         // and gets an array of objects as a return value.
         // we store this return value in the variable $messages
-        $messages2 = Message::all()->sortByDesc('created_at');
+        $message = Message::all()->sortByDesc('created_at');
         
         // echo "<pre>";
         // print_r($messages2);
         // echo "</pre>";
-
-        $messagesCount = $messages2->count();
-  
+ 
         // This line would output the messages in the UI/Browser
         // and stop the script execution.
         // good for debugging ;o)
@@ -30,7 +28,7 @@ class MessageController extends Controller
         // through which we cann pass the $messages array to the view.
         // we can pass it as an optional second paramter (
         // associative array)
-        return view('messages', ['messages2' => $messages2]);
+        return view('messages', ['messages' => $message]);
   
     }
 
@@ -85,7 +83,7 @@ class MessageController extends Controller
         $result = Message::findOrFail($id)->delete();
   
         // after that we redirect to the message list again  
-        return redirect('/messages');        
+        return redirect('/');        
     } 
  
 }

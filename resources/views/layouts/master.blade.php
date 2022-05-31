@@ -18,7 +18,7 @@
    @yield('content')
    <!-- hier wird die php Funktion date() aufgerufen mit dem Format-Pattern 'd.m.Y'
     und im html ausgegeben-->
-   <div><b>{{date('d.m.Y')}} | Database entries: {{ $messages2->count() }}</b></div>
+   <hr><div>{{ $message->count()}} messages | Last update {{ $message->first()['updated_at']}}</div>
   
 </body>
 </html>

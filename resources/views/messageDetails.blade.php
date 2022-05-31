@@ -10,21 +10,19 @@
 
       @section('content')
       <h2>Message Details:</h2>
-
+      <form action="/update" method="POST">
+      @csrf
+      <input type="hidden" name="id" value="{{ $message['id'] }}">
       <input type="text" name="title" value='{{ $message->title }}'>
       <input type="text" name="subject" value='{{ $message->subject }}'>
       <textarea name="content">{{ $message->content }}</textarea>
-      
-      <h3>{{$message->title}}</h3>
-      <p>{{$message->subject}}</p>
-      <p>{{$message->content}}</p>
 
       <div class='button_bar'>
 
-         <form action="/" method="post">
-            @csrf
-            @method('update')
-            <button class="button_change" type="submit">Change message</button>
+         
+
+            <!-- @method('update') -->
+            <button class="button_change" type="submit">Update message</button>
          </form>
 
          <form action="/{{$message->id}}" method="post">

@@ -60,7 +60,7 @@
       <li>
       <b>
          <!-- this link to the message details is created dynamicallyand will point to /messages/1 for the first message -->
-         <a href='/{{$message->id}}'>{{$message->title}}:</a>
+         <a href='/update/{{$message->id}}'>{{$message->title}}:</a>
       </b><br>
          {{$message->subject}}<br>
          {{$message->content}}<br>

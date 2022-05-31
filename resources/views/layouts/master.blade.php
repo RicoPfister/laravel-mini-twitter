@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<div class="main_container2">
+<div class="main_container">
    <!-- hier wird auch der Wert von der section "title" eines blade templates ausgefüllt,
    welches dieses layout "extended" -->
    <h1><a href="/">@yield('title')</a></h1>

@@ -86,21 +86,23 @@ class MessageController extends Controller
         return redirect('/');        
     } 
 
-    public function update(Request $request, $id)
-{
-    $request->validate([
-        'title' => 'required',
-        'subject' => 'required',
-        'content' => 'required',
-    ]);
+    public function update(Request $request)
+    {
+        $request->validate([
+            'title' => 'required',
+            'subject' => 'required',
+            'content' => 'required',
+        ]);
 
-    Task::find($id)->update([
-    'title' => request('title'),
-    'id' => $id,
-    'subject' => request('subject'),
-    'content' => request('content')
-]);
-}
+       $data=Message::find($request->id);
+       $data->title=$request->title;
+       $data->subject=$request->subject;
+       $data->content=$request->content;
+       $data->save();
+       
+        // after that we redirect to the message list again  
+        return redirect('/');         
+    }
  
 }
 

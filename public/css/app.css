@@ -1,10 +1,10 @@
 body, html {
-    height: 100%;
     width: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
-}
+    background: rgb(230,230,250);
+    background: linear-gradient(0deg, rgba(230,230,250,1) 0%, rgba(210,210,250,1) 20%, rgba(190,190,250,1) 60%, rgba(170,170,250,1) 77%, rgba(150,150,250,1) 95%, rgba(130,130,250,1) 100%);
+    }
 
 ul {
     list-style-type: none; /* Remove bullets */
@@ -21,19 +21,37 @@ a:hover, a:visited, a:link, a:active
     text-decoration: none;
 }
 
-.new_message {
-    display : block;
-}
-
 input, textarea {
     margin-bottom: 5px;
     width: 200px;
     resize: none;
+    background: rgb(188,212,230);
+    border: 1px solid black;
 }
 
 textarea {
     height: 100px;
 }
 
+.main_container {
+    width: 300px;
+    border: solid 2px black;
+    padding: 10px;
+    padding-top: 0;
+    margin-top: 2rem;
+    box-shadow: 0 0 1em gold;
+    background: rgb(220,220,250);
+}
 
+button {
+    background: lightblue;
+    margin-right: 3px;
+}
 
+.button_bar {
+    display: flex;
+}
+
+.button_delete {
+    background: #e07373;
+}

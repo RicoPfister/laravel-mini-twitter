@@ -2,7 +2,7 @@
 
 <!--extend layout master.blade.php -->
 
-<div class='main_container'>
+<div class=''>
  
    <!-- @extends('layouts/master') -->
    
@@ -68,7 +68,7 @@
       </li>
    @endforeach
    </ul>
- 
+   </div>
    @endsection
 
-<div>
+

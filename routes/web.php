@@ -26,4 +26,6 @@ Route::get('/{id}', [MessageController::class, 'details']);
 
 Route::delete('/{id}', [MessageController::class, 'delete']);
 
+Route::patch('/}', [MessageController::class, 'update']);
+
 

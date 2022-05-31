@@ -9,14 +9,16 @@
    <title>@yield('title')</title>
 </head>
 <body>
-   <!-- hier wird auch der Wert von der section "title" eines blade templates ausgefüllt,
-   welches dieses layout "extended" -->
-   <h1><a href="/">@yield('title')</a></h1>
-   <!-- hier wird der Wert von der section "content" eines blade templates ausgefüllt,
-   welches dieses layout "extended" -->
-   @yield('content')
-   <!-- hier wird die php Funktion date() aufgerufen mit dem Format-Pattern 'd.m.Y'
-    und im html ausgegeben-->
-   <div><b>Date today: {{date('d.m.Y')}}</b></div>   
+   <div class='main_container'>
+      <!-- hier wird auch der Wert von der section "title" eines blade templates ausgefüllt,
+      welches dieses layout "extended" -->
+      <h1><a href="/">@yield('title')</a></h1>
+      <!-- hier wird der Wert von der section "content" eines blade templates ausgefüllt,
+      welches dieses layout "extended" -->
+      @yield('content')
+      <!-- hier wird die php Funktion date() aufgerufen mit dem Format-Pattern 'd.m.Y'
+      und im html ausgegeben-->
+   <div><b>Date today: {{date('d.m.Y')}}</b></div>
+   </div>   
 </body>
 </html>

@@ -10,6 +10,8 @@
    <script type="text/javascript" src="{{ mix('/js/app.js') }}" defer></script>
 </head>
 <body>
+
+<div class="main_container2">
    <!-- hier wird auch der Wert von der section "title" eines blade templates ausgefüllt,
    welches dieses layout "extended" -->
    <h1><a href="/">@yield('title')</a></h1>
@@ -19,6 +21,6 @@
    <!-- hier wird die php Funktion date() aufgerufen mit dem Format-Pattern 'd.m.Y'
     und im html ausgegeben-->
    <hr><div>{{ $message->count()}} messages | Last update {{ $message->first()['updated_at']}}</div>
-  
+</div>
 </body>
 </html>

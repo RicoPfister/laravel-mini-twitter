@@ -17,9 +17,7 @@
       <input type="text" name="subject" value='{{ $message->subject }}'>
       <textarea name="content">{{ $message->content }}</textarea>
 
-      <div class='button_bar'>
-
-         
+      <div class='button_bar'>         
 
             <!-- @method('update') -->
             <button class="button_change" type="submit">Update message</button>

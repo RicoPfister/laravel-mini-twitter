@@ -13,6 +13,7 @@ class MessageController extends Controller
         // and gets an array of objects as a return value.
         // we store this return value in the variable $messages
         $message = Message::all()->sortByDesc('created_at');
+        $message->test=123;
         
         // echo "<pre>";
         // print_r($messages2);
@@ -28,6 +29,7 @@ class MessageController extends Controller
         // through which we cann pass the $messages array to the view.
         // we can pass it as an optional second paramter (
         // associative array)
+
         return view('messages', ['messages' => $message]);
   
     }
@@ -64,6 +66,7 @@ class MessageController extends Controller
         // and the same ID that web.php took out of the link and
         // "passed it on" to the controller   
         $message = Message::findOrFail($id);
+        $update = Message::all()->sortByDesc('updated_at');
        
         // we return the view messageDetails.blade.php
         // and we also pass it the Message-Object that we got
@@ -98,6 +101,7 @@ class MessageController extends Controller
        $data->title=$request->title;
        $data->subject=$request->subject;
        $data->content=$request->content;
+       $data->updated_at = now();
        $data->save();
        
         // after that we redirect to the message list again  

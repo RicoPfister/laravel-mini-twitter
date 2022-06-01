@@ -20,7 +20,7 @@
    @yield('content')
    <!-- hier wird die php Funktion date() aufgerufen mit dem Format-Pattern 'd.m.Y'
     und im html ausgegeben-->
-   <hr><div>{{ $message->count()}} messages | Last update {{ $message->first()['updated_at']}}</div>
+   <hr><div>{{ $message->count()}} messages | Last update {{ $message->test }}</div>
 </div>
 </body>
 </html>

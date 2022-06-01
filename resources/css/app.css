@@ -21,14 +21,6 @@ a:hover, a:visited, a:link, a:active
     text-decoration: none;
 }
 
-input, textarea {
-    margin-bottom: 5px;
-    width: 200px;
-    resize: none;
-    background: rgb(188,212,230);
-    border: 1px solid black;
-}
-
 textarea {
     height: 100px;
 }
@@ -55,3 +47,16 @@ button {
 .button_delete {
     background: #e07373;
 }
+
+input, textarea {
+    margin-bottom: 5px;
+    width: 200px;
+    resize: none;
+    background: rgb(188,212,230);
+    border: 1px solid black;
+}
+
+li {
+    margin-bottom: 15px;
+}
+

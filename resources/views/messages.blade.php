@@ -64,7 +64,7 @@
       </b><br>
          {{$message->subject}}<br>
          {{$message->content}}<br>
-         {{$message->created_at->diffForHumans()}}          
+         {{$message->updated_at->diffForHumans()}}          
       </li>
    @endforeach
    </ul>

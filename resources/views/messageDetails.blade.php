@@ -10,9 +10,9 @@
 
       @section('content')
       <h2>Message Details:</h2>
-      <form action="/update" method="POST">
+      <form action="/update/{{$message->id}}" method="post">
       @csrf
-      <input type="hidden" name="id" value="{{ $message['id'] }}">
+      
       <input type="text" name="title" value='{{ $message->title }}'>
       <input type="text" name="subject" value='{{ $message->subject }}'>
       <textarea name="content">{{ $message->content }}</textarea>

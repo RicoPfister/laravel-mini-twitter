@@ -22,10 +22,12 @@ Route::get('/', [MessageController::class, 'showAll']);
 
 Route::post('/', [MessageController::class, 'create']);
 
+Route::post('update/{id}', [MessageController::class, 'update']);
+
 Route::get('update/{id}', [MessageController::class, 'details']);
 
 Route::delete('/{id}', [MessageController::class, 'delete']);
 
-Route::post('update', [MessageController::class, 'update']);
+
 
 

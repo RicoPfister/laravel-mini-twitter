@@ -5,7 +5,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <!-- hier wird der Wert von der section "title" eines blade templates ausgefüllt,
    welches dieses layout "extended" -->
-   <title>@yield('title')</title>
+   <title class="rainbow">@yield('title')</title>
    <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
    <script type="text/javascript" src="{{ mix('/js/app.js') }}" defer></script>
 </head>
@@ -20,7 +20,8 @@
    @yield('content')
    <!-- hier wird die php Funktion date() aufgerufen mit dem Format-Pattern 'd.m.Y'
     und im html ausgegeben-->
-   <hr><div>{{ $message->count()}} messages | Last update {{$message->updated_at->diffForHumans()}}</div>
+    <!-- <?=print_r($message);?> -->
+   <hr><div>{{ $message->count()}} messages | Last update {{ $last_updated }}</div>
 </div>
 </body>
 </html>

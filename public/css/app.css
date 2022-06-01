@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
-
+@charset "UTF-8";
 /*!
  * Bootstrap v5.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -11284,5 +11284,154 @@ textarea.form-control-lg {
 
   .d-print-none {
     display: none !important;
+  }
+}
+body, html {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: rgb(230, 230, 250);
+  background: linear-gradient(0deg, rgb(230, 230, 250) 0%, rgb(210, 210, 250) 20%, rgb(190, 190, 250) 60%, rgb(170, 170, 250) 77%, rgb(150, 150, 250) 95%, rgb(130, 130, 250) 100%);
+}
+
+ul {
+  list-style-type: none;
+  /* Remove bullets */
+  padding: 0;
+  /* Remove padding */
+  margin: 0;
+  /* Remove margins */
+}
+
+.warning {
+  color: red;
+}
+
+a:hover, a:visited, a:link, a:active {
+  text-decoration: none;
+}
+
+textarea {
+  height: 100px;
+}
+
+.main_container {
+  width: 300px;
+  border: solid 2px black;
+  padding: 10px;
+  padding-top: 0;
+  margin-top: 2rem;
+  box-shadow: 0 0 1em gold;
+  background: rgb(220, 220, 250);
+}
+
+button {
+  background: lightblue;
+  margin-right: 3px;
+}
+
+.button_bar {
+  display: flex;
+}
+
+.button_delete {
+  background: #e07373;
+}
+
+input, textarea {
+  margin-bottom: 5px;
+  width: 200px;
+  resize: none;
+  background: rgb(188, 212, 230);
+  border: 1px solid black;
+}
+
+li {
+  margin-bottom: 15px;
+}
+
+/* title rainbow animation */
+.rainbow {
+  -webkit-animation: rainbow 2.5s linear;
+          animation: rainbow 2.5s linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes rainbow {
+  100%, 0% {
+    color: rgb(255, 0, 0);
+  }
+  8% {
+    color: rgb(255, 127, 0);
+  }
+  16% {
+    color: rgb(255, 255, 0);
+  }
+  25% {
+    color: rgb(127, 255, 0);
+  }
+  33% {
+    color: rgb(0, 255, 0);
+  }
+  41% {
+    color: rgb(0, 255, 127);
+  }
+  50% {
+    color: rgb(0, 255, 255);
+  }
+  58% {
+    color: rgb(0, 127, 255);
+  }
+  66% {
+    color: rgb(0, 0, 255);
+  }
+  75% {
+    color: rgb(127, 0, 255);
+  }
+  83% {
+    color: rgb(255, 0, 255);
+  }
+  91% {
+    color: rgb(255, 0, 127);
+  }
+}
+
+@keyframes rainbow {
+  100%, 0% {
+    color: rgb(255, 0, 0);
+  }
+  8% {
+    color: rgb(255, 127, 0);
+  }
+  16% {
+    color: rgb(255, 255, 0);
+  }
+  25% {
+    color: rgb(127, 255, 0);
+  }
+  33% {
+    color: rgb(0, 255, 0);
+  }
+  41% {
+    color: rgb(0, 255, 127);
+  }
+  50% {
+    color: rgb(0, 255, 255);
+  }
+  58% {
+    color: rgb(0, 127, 255);
+  }
+  66% {
+    color: rgb(0, 0, 255);
+  }
+  75% {
+    color: rgb(127, 0, 255);
+  }
+  83% {
+    color: rgb(255, 0, 255);
+  }
+  91% {
+    color: rgb(255, 0, 127);
   }
 }

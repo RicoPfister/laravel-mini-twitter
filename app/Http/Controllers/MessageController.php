@@ -89,7 +89,8 @@ class MessageController extends Controller
         return redirect('/');        
     } 
 
-    public function update(Request $request)
+    public function update(Request $request, $id)
+
     {
         $request->validate([
             'title' => 'required',
@@ -97,7 +98,7 @@ class MessageController extends Controller
             'content' => 'required',
         ]);
 
-       $data=Message::find($request->id);
+       $data=Message::findOrFail($id);
        $data->title=$request->title;
        $data->subject=$request->subject;
        $data->content=$request->content;

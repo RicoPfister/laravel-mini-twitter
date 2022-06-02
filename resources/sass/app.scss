@@ -15,6 +15,10 @@ body, html {
     background: linear-gradient(0deg, rgba(230,230,250,1) 0%, rgba(210,210,250,1) 20%, rgba(190,190,250,1) 60%, rgba(170,170,250,1) 77%, rgba(150,150,250,1) 95%, rgba(130,130,250,1) 100%);
     }
 
+body {
+    position: absolute;
+}
+
 ul {
     list-style-type: none; /* Remove bullets */
     padding: 0; /* Remove padding */
@@ -42,16 +46,18 @@ textarea {
     margin-top: 2rem;
     box-shadow: 0 0 1em gold;
     background: rgb(220,220,250);
+    margin-bottom: 2rem;
 }
 
 button {
     background: lightblue;
     margin-right: 3px;
+    height: 30px;
 }
 
 .button_bar {
     display: flex;
-}
+    }
 
 .button_delete {
     background: #e07373;
@@ -72,7 +78,7 @@ li {
 /* title rainbow animation */
 
 .rainbow{
-    animation: rainbow 2.5s linear;
+    animation: rainbow 20s linear;
     animation-iteration-count: infinite;
 }
 
@@ -113,6 +119,11 @@ li {
     91%{
         color: rgb(255,0,127);
     }
+}
+
+.banner {
+    position: fixed;
+    left: 0;
 }
 
 

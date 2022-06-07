@@ -1,17 +1,17 @@
 <div>
 
-   @extends('layouts/master') 
-   
+   @extends('layouts/master')
+
    {{-- sets value for section title to 'Mini Twitter' (section title is used in messages.blade.php)  --}}
-   @section('title', 'Mini Twitter') 
-   
+   @section('title', 'Mini Twitter')
+
    {{-- starts section content, defines some html for section content and end section content
    ts value for section title to 'Mini Twitter' (section content is used in messages.blade.php)  --}}
 
    @section('content')
 
    <div class='new_message'>
-      
+
       <h2>New message: </h2>
 
       <form action='/' method='post'>
@@ -31,38 +31,38 @@
 
       </form>
 
-   </div>
+   </div class="main_container">
 
-   {{-- validation warning  --}}
+      {{-- validation warning  --}}
 
-   @if ($errors->any()) 
-         <div>
-            <ul>
-               @foreach ($errors->all() as $error)
-                  <li class='warning'>{{ $error }}</li>
-               @endforeach
-            </ul>
-         </div>
-   @endif
+      @if ($errors->any())
+            <div>
+               <ul>
+                  @foreach ($errors->all() as $error)
+                     <li class='warning'>{{ $error }}</li>
+                  @endforeach
+               </ul>
+            </div>
+      @endif
 
-   <h2>Recent messages:</h2>
+      <h2>Recent messages:</h2>
 
-   <ul class='list'>
-   {{-- loops through the $messages, that this blade template
-      gets from MessageController.php. for each element of the loop which
-      we call $message we print the properties (title, content
-      and created_at in an <li> element  --}}
-   @foreach ($messages as $message) 
-      <li>
-      <b>
-         {{-- this link to the message details is created dynamicallyand will point to /messages/1 for the first message  --}}
-         <a href='/update/{{$message->id}}'>{{$message->title}}:</a>
-      </b><br>
-         {{$message->subject}}<br>
-         {{$message->content}}<br>
-         {{$message->updated_at->diffForHumans()}}          
-      </li>
-   @endforeach
-   </ul>
+      <ul class='list'>
+      {{-- loops through the $messages, that this blade template
+         gets from MessageController.php. for each element of the loop which
+         we call $message we print the properties (title, content
+         and created_at in an <li> element  --}}
+      @foreach ($messages as $message)
+         <li>
+         <b>
+            {{-- this link to the message details is created dynamicallyand will point to /messages/1 for the first message  --}}
+            <a href='/update/{{$message->id}}'>{{$message->title}}:</a>
+         </b><br>
+            {{$message->subject}}<br>
+            {{$message->content}}<br>
+            {{$message->updated_at->diffForHumans()}}
+         </li>
+      @endforeach
+      </ul>
    </div>
    @endsection

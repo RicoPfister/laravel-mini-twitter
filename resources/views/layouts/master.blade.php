@@ -11,12 +11,13 @@
 </head>
 <body>
 
-@include('banner');
+@include('banner-beta-css')
 
 <div class="main_container">
    {{-- hier wird auch der Wert von der section "title" eines blade templates ausgefüllt,
    welches dieses layout "extended"  --}}
    <h1><a class="rainbow" href="/">@yield('title')</a></h1>
+   <img class="" src="{{ asset('img/happybird.gif')}}">
    {{-- hier wird der Wert von der section "content" eines blade templates ausgefüllt,
    welches dieses layout "extended"  --}}
    @yield('content')

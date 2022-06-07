@@ -11286,16 +11286,12 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-body, html {
+body {
   width: 100%;
   display: flex;
   justify-content: center;
   background: rgb(230, 230, 250);
   background: linear-gradient(0deg, rgb(230, 230, 250) 0%, rgb(210, 210, 250) 20%, rgb(190, 190, 250) 60%, rgb(170, 170, 250) 77%, rgb(150, 150, 250) 95%, rgb(130, 130, 250) 100%);
-}
-
-body {
-  position: absolute;
 }
 
 ul {
@@ -11327,7 +11323,7 @@ textarea {
   margin-top: 2rem;
   box-shadow: 0 0 1em gold;
   background: rgb(220, 220, 250);
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 }
 
 button {
@@ -11441,7 +11437,21 @@ li {
     color: rgb(255, 0, 127);
   }
 }
-.banner {
+body:after {
+  content: "beta";
   position: fixed;
-  left: 0;
+  width: 160px;
+  height: 50px;
+  background: red;
+  top: 7px;
+  left: -40px;
+  text-align: center;
+  font-size: 20px;
+  font-family: sans-serif;
+  padding-top: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+  line-height: 27px;
+  transform: rotate(-45deg);
 }

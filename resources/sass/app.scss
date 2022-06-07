@@ -9,7 +9,6 @@
 
 body {
     width: 100%;
-
     display: flex;
     justify-content: center;
     background: rgb(230,230,250);
@@ -82,6 +81,7 @@ li {
 .rainbow{
     animation: rainbow 20s linear;
     animation-iteration-count: infinite;
+    margin-right: 10px;
 }
 
 @keyframes rainbow{
@@ -160,7 +160,16 @@ body:after{
     line-height: 27px;
     transform:rotate(-45deg);
   }
-    
+
+  .banner-beta {
+      height: 50px;
+  }
+
+  .title_box {
+    display: flex;
+    margin-top: 10px;
+  }
+
 
 
 

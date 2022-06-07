@@ -11358,6 +11358,7 @@ li {
           animation: rainbow 20s linear;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
+  margin-right: 10px;
 }
 
 @-webkit-keyframes rainbow {
@@ -11454,4 +11455,13 @@ body:after {
   color: #fff;
   line-height: 27px;
   transform: rotate(-45deg);
+}
+
+.banner-beta {
+  height: 50px;
+}
+
+.title_box {
+  display: flex;
+  margin-top: 10px;
 }
